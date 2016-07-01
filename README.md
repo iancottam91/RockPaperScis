@@ -46,7 +46,7 @@ IDEAS:
 
 ### Hours of fun
 
-- DB to store results, could use Mongo or just a simple JSON file might suffice in the API
+- Store results in Local storage
 
 #### AI
 
