@@ -1,0 +1,9 @@
+/* line 3, ../sass/ie.scss */
+.weapon.weapon-scissors .edge.edge-two .metal {
+  border-radius: 0 0 1em 0;
+}
+
+/* line 6, ../sass/ie.scss */
+.weapon.weapon-scissors .edge.edge-one .metal {
+  border-radius: 0 1em 0 0;
+}

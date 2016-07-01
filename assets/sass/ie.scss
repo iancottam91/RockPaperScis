@@ -1,0 +1,8 @@
+// reverse the border radius on scissors for IE
+
+.weapon.weapon-scissors .edge.edge-two .metal {
+  border-radius: 0 0 1em 0;
+}
+.weapon.weapon-scissors .edge.edge-one .metal {
+  border-radius: 0 1em 0 0;
+}

@@ -1,0 +1,324 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../../Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 8, ../sass/screen.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 20, ../sass/_weapons.scss */
+.weapon.weapon-scissors {
+  background: none;
+  position: relative;
+  width: 23em;
+  height: 7em;
+  margin: 7.5em auto;
+}
+/* line 27, ../sass/_weapons.scss */
+.weapon.weapon-scissors .focus {
+  width: 10px;
+  height: 10px;
+  background: black;
+  position: absolute;
+  border-radius: 5px;
+  top: 60px;
+  left: 39%;
+}
+/* line 37, ../sass/_weapons.scss */
+.weapon.weapon-scissors .edge {
+  width: 23em;
+  height: 4em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 36% 100% 0;
+}
+/* line 47, ../sass/_weapons.scss */
+.weapon.weapon-scissors .edge.edge-one {
+  transform: rotate(11.5deg);
+  animation: rotate-down 2s ease-out infinite;
+}
+/* line 52, ../sass/_weapons.scss */
+.weapon.weapon-scissors .edge.edge-two {
+  transform-origin: 36% 0% 0;
+  transform: rotate(-11.5deg);
+  animation: rotate-up 2s ease-out infinite;
+  top: 4em;
+}
+/* line 57, ../sass/_weapons.scss */
+.weapon.weapon-scissors .edge.edge-two .metal {
+  top: 0;
+  border-radius: 0 1em 0 0;
+}
+/* line 60, ../sass/_weapons.scss */
+.weapon.weapon-scissors .edge.edge-two .metal:after {
+  top: 0;
+  border-top: 2em solid grey;
+  border-bottom: 0;
+}
+/* line 69, ../sass/_weapons.scss */
+.weapon.weapon-scissors .edge .handle {
+  width: 8em;
+  height: 4em;
+  border-radius: 2em;
+  border: 1em solid black;
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 82, ../sass/_weapons.scss */
+.weapon.weapon-scissors .edge .metal {
+  width: 15em;
+  height: 1em;
+  position: absolute;
+  top: 3em;
+  left: 8em;
+  background: grey;
+  border-radius: 0 0 1em 0;
+}
+/* line 95, ../sass/_weapons.scss */
+.weapon.weapon-scissors .edge .metal:after {
+  content: '';
+  display: inline-block;
+  border-bottom: 2em solid grey;
+  border-right: 4em solid transparent;
+  height: 0;
+  width: 2em;
+  position: absolute;
+  left: -2em;
+  bottom: 0;
+}
+/* line 113, ../sass/_weapons.scss */
+.weapon.weapon-paper {
+  padding: 20px;
+  background: grey;
+}
+/* line 117, ../sass/_weapons.scss */
+.weapon.weapon-paper .papers {
+  background-color: white;
+  height: 300px;
+  padding: 20px;
+  width: 240px;
+  -webkit-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1), 3px 3px 0 white, 4px 4px 0 rgba(0, 0, 0, 0.125), 6px 6px 0 white, 7px 7px 0 rgba(0, 0, 0, 0.15), 9px 9px 0 white, 10px 10px 0 rgba(0, 0, 0, 0.175);
+  -moz-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1), 3px 3px 0 white, 4px 4px 0 rgba(0, 0, 0, 0.125), 6px 6px 0 white, 7px 7px 0 rgba(0, 0, 0, 0.15), 9px 9px 0 white, 10px 10px 0 rgba(0, 0, 0, 0.175);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1), 3px 3px 0 white, 4px 4px 0 rgba(0, 0, 0, 0.125), 6px 6px 0 white, 7px 7px 0 rgba(0, 0, 0, 0.15), 9px 9px 0 white, 10px 10px 0 rgba(0, 0, 0, 0.175);
+}
+
+@keyframes rotate-down {
+  /* line 130, ../sass/_weapons.scss */
+  0% {
+    transform: rotate(11.5deg);
+  }
+
+  /* line 131, ../sass/_weapons.scss */
+  50% {
+    transform: rotate(30deg);
+  }
+
+  /* line 132, ../sass/_weapons.scss */
+  100% {
+    transform: rotate(11.5deg);
+  }
+}
+
+@keyframes rotate-up {
+  /* line 136, ../sass/_weapons.scss */
+  0% {
+    transform: rotate(-11.5deg);
+  }
+
+  /* line 137, ../sass/_weapons.scss */
+  50% {
+    transform: rotate(-30deg);
+  }
+
+  /* line 138, ../sass/_weapons.scss */
+  100% {
+    transform: rotate(-11.5deg);
+  }
+}
+
+/* line 9, ../sass/_typog.scss */
+body {
+  font-family: Sans-Serif;
+}
+
+/* line 14, ../sass/_typog.scss */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: Sans-Serif;
+  font-weight: bold;
+  color: #202020;
+}
+
+/* line 22, ../sass/_typog.scss */
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+/* line 27, ../sass/_typog.scss */
+h1 small,
+h1 .small, .h1 small,
+.h1 .small,
+h2 small,
+h2 .small, .h2 small,
+.h2 .small,
+h3 small,
+h3 .small, .h3 small,
+.h3 .small {
+  font-size: 65%;
+}
+
+/* line 33, ../sass/_typog.scss */
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 7.5px;
+  margin-bottom: 7.5px;
+}
+
+/* line 38, ../sass/_typog.scss */
+h1, .h1 {
+  font-size: 30px;
+}
+
+/* line 39, ../sass/_typog.scss */
+h2, .h2 {
+  font-size: 27px;
+}
+
+/* line 40, ../sass/_typog.scss */
+h3, .h3 {
+  font-size: 24px;
+}
+
+/* line 41, ../sass/_typog.scss */
+h4, .h4 {
+  font-size: 21px;
+}
+
+/* line 42, ../sass/_typog.scss */
+h5, .h5 {
+  font-size: 18px;
+}
+
+/* line 43, ../sass/_typog.scss */
+h6, .h6 {
+  font-size: 15px;
+}
+
+/* line 1, ../sass/_framework.scss */
+.container {
+  background: none;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* line 9, ../sass/_framework.scss */
+.container:before, .container:after {
+  content: " ";
+  display: table;
+}
+
+/* line 14, ../sass/_framework.scss */
+.container:after {
+  clear: both;
+}
+
+@media (min-width: 768px) {
+  /* line 19, ../sass/_framework.scss */
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 25, ../sass/_framework.scss */
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 31, ../sass/_framework.scss */
+  .container {
+    width: 1170px;
+  }
+}
+@media (min-width: 1440px) {
+  /* line 38, ../sass/_framework.scss */
+  .container {
+    width: 1400px;
+  }
+}
