@@ -1,5 +1,15 @@
-- Make remaining tests pass
-- do tasks on welcome.html
 - set up game logic
 - UI
 - stop scissors from snipping when you hover over them
+
+INTERACTION:
+
+1) Need to add a user
+2) Select a user
+3) play game (with user selected)
+
+
+Storage:
+
+- error for adding same user
+- error for adding more than five users

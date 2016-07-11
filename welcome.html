@@ -3,33 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <title>Welcome</title>
+
+  <!-- styles -->
+  <link rel="stylesheet" type="text/css" href="assets/css/screen.css">
+  <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="assets/css/ie.css">
+  <![endif]-->
+
+  <!-- scripts -->
   <script src="assets/js/UserManagement.js" type="text/javascript"></script>
+
 </head>
 <body>
 
   <!-- 1) form to create a user -->
   <!-- 2) button to wipe all user data -->
   <!-- 3) display all user data -->
+
+  <div class="container">      
+    <h1>Rock Paper Scissors</h1>
+
+
+    <div>
+      <input id="user-name-field" type="text">
+      <button id="add-user-button">Add User</button>
+    </div>
+
+
+    <h2>Users</h2>
+    <p id="no-data-message">There is no previous user data.</p>
+    <table id="leaderboard-data">
+      <thead>
+        <tr>
+          <th>User Name</th>
+          <th>Wins</th>
+          <th>Losses</th>
+        </tr>
+      </thead>
+      <tbody id="leaderboard-data-body">
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+      </tbody>
+    </table><br>
+    <div>
+      <button id="delete-users">Delete User Data</button>
+    </div>
+  </div>
   
-  <script type="text/javascript">
-
-    var storer = Storage();
-
-    var userData = {
-      name : 'Jo Smith',
-      wins : 0,
-      loses: 0,
-      weaponPlayed : {
-        'rock' : 0,
-        'paper' : 0,
-        'scissors' : 0
-      }
-    }
-
-    // create a user and save it to the storage
-    storer.createUser(userData);
-
-  </script>
+  <script src="assets/js/userInteractions.js" type="text/javascript"></script>
 
 </body>
 </html>

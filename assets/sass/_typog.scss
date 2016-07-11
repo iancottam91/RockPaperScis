@@ -41,3 +41,11 @@ h3, .h3 { font-size: $font-size-body*1.6; }
 h4, .h4 { font-size: $font-size-body*1.4; }
 h5, .h5 { font-size: $font-size-body*1.2; }
 h6, .h6 { font-size: $font-size-body; }
+
+table{
+
+  th, td{
+    padding: 5px 10px;
+      border: 1px solid $font-color;
+  }
+}
