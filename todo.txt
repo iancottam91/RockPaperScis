@@ -1,0 +1,5 @@
+- Make remaining tests pass
+- do tasks on welcome.html
+- set up game logic
+- UI
+- stop scissors from snipping when you hover over them
