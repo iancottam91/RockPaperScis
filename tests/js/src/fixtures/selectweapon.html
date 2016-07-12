@@ -1,13 +1,43 @@
-<div class="row">
-  <div id="select-rock" class="col-sm-4">Rock</div>
-  <div id="select-paper" class="col-sm-4">Paper</div>
-  <div id="select-scissors" class="col-sm-4">Scissors</div>
-</div><br><br>
-<div>
-  <span id="play-game">Play as: <span id="player-a-weapon"></span><span>
-</div>
-<br>
-<div>
-  <p>Computer is: <span id="player-b-weapon"></span><p>
-</div>
-<div id="game-result"></div>
+<h2 class="game-intro"><span id="selected-user"></span><span id="play-message">. Choose your weapon!</span></h2>
+
+      <div>
+        <span class="hidden" id="play-game">Play as <span id="user-weapon"></span>!</span>
+        <span id="computer-play" class="hidden">
+          <span><span id="player-a-weapon"></span></span>
+          <span class="versus">VS</span>
+          <span><span id="player-b-weapon"></span></span>
+        </span>
+      </div>
+      <div class="hidden" id="game-result">
+        <p id="game-result-message"></p>
+        <p>Don't forget to check your progress in the table below!</p>
+      </div>
+
+      <div class="row weapons-row">
+        <div id="select-rock" class="col-md-4 weapon-select">
+          <p class="weapon-name">Rock</p>
+          <div class="weapon weapon-rock">
+            <img src="assets/img/rock.png">
+          </div>
+        </div>
+        <div id="select-paper" class="col-md-4 weapon-select">
+          <p class="weapon-name">Paper</p>
+          <div class="weapon weapon-paper">
+            <div class="papers"></div>
+          </div>
+        </div>
+        <div id="select-scissors" class="col-md-4 weapon-select">
+          <p class="weapon-name">Scissors</p>
+          <div class="weapon weapon-scissors">
+            <div class="edge edge-one">
+              <div class="metal"></div>
+              <div class="handle"></div>
+            </div>
+            <div class="edge edge-two">
+              <div class="metal"></div>
+              <div class="handle"></div>
+            </div>
+            <div class="focus"></div>
+          </div>
+        </div>
+      </div>

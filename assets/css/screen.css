@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../../../Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,187 +24,54 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../Ruby/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+/* line 116, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
-/* line 8, ../sass/screen.scss */
+/* line 9, ../sass/screen.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-/* line 20, ../sass/_weapons.scss */
-.weapon.weapon-scissors {
-  background: none;
-  position: relative;
-  width: 23em;
-  height: 7em;
-  margin: 7.5em auto;
-}
-/* line 27, ../sass/_weapons.scss */
-.weapon.weapon-scissors .focus {
-  width: 10px;
-  height: 10px;
-  background: black;
-  position: absolute;
-  border-radius: 5px;
-  top: 60px;
-  left: 39%;
-}
-/* line 37, ../sass/_weapons.scss */
-.weapon.weapon-scissors .edge {
-  width: 23em;
-  height: 4em;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform-origin: 36% 100% 0;
-}
-/* line 47, ../sass/_weapons.scss */
-.weapon.weapon-scissors .edge.edge-one {
-  transform: rotate(11.5deg);
-  animation: rotate-down 2s ease-out infinite;
-}
-/* line 52, ../sass/_weapons.scss */
-.weapon.weapon-scissors .edge.edge-two {
-  transform-origin: 36% 0% 0;
-  transform: rotate(-11.5deg);
-  animation: rotate-up 2s ease-out infinite;
-  top: 4em;
-}
-/* line 57, ../sass/_weapons.scss */
-.weapon.weapon-scissors .edge.edge-two .metal {
-  top: 0;
-  border-radius: 0 1em 0 0;
-}
-/* line 60, ../sass/_weapons.scss */
-.weapon.weapon-scissors .edge.edge-two .metal:after {
-  top: 0;
-  border-top: 2em solid grey;
-  border-bottom: 0;
-}
-/* line 69, ../sass/_weapons.scss */
-.weapon.weapon-scissors .edge .handle {
-  width: 8em;
-  height: 4em;
-  border-radius: 2em;
-  border: 1em solid black;
-  background: white;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-/* line 82, ../sass/_weapons.scss */
-.weapon.weapon-scissors .edge .metal {
-  width: 15em;
-  height: 1em;
-  position: absolute;
-  top: 3em;
-  left: 8em;
-  background: grey;
-  border-radius: 0 0 1em 0;
-}
-/* line 95, ../sass/_weapons.scss */
-.weapon.weapon-scissors .edge .metal:after {
-  content: '';
-  display: inline-block;
-  border-bottom: 2em solid grey;
-  border-right: 4em solid transparent;
-  height: 0;
-  width: 2em;
-  position: absolute;
-  left: -2em;
-  bottom: 0;
-}
-/* line 113, ../sass/_weapons.scss */
-.weapon.weapon-paper {
-  padding: 20px;
-  background: grey;
-}
-/* line 117, ../sass/_weapons.scss */
-.weapon.weapon-paper .papers {
-  background-color: white;
-  height: 300px;
-  padding: 20px;
-  width: 240px;
-  -webkit-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1), 3px 3px 0 white, 4px 4px 0 rgba(0, 0, 0, 0.125), 6px 6px 0 white, 7px 7px 0 rgba(0, 0, 0, 0.15), 9px 9px 0 white, 10px 10px 0 rgba(0, 0, 0, 0.175);
-  -moz-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1), 3px 3px 0 white, 4px 4px 0 rgba(0, 0, 0, 0.125), 6px 6px 0 white, 7px 7px 0 rgba(0, 0, 0, 0.15), 9px 9px 0 white, 10px 10px 0 rgba(0, 0, 0, 0.175);
-  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1), 3px 3px 0 white, 4px 4px 0 rgba(0, 0, 0, 0.125), 6px 6px 0 white, 7px 7px 0 rgba(0, 0, 0, 0.15), 9px 9px 0 white, 10px 10px 0 rgba(0, 0, 0, 0.175);
-}
-
-@keyframes rotate-down {
-  /* line 130, ../sass/_weapons.scss */
-  0% {
-    transform: rotate(11.5deg);
-  }
-
-  /* line 131, ../sass/_weapons.scss */
-  50% {
-    transform: rotate(30deg);
-  }
-
-  /* line 132, ../sass/_weapons.scss */
-  100% {
-    transform: rotate(11.5deg);
-  }
-}
-
-@keyframes rotate-up {
-  /* line 136, ../sass/_weapons.scss */
-  0% {
-    transform: rotate(-11.5deg);
-  }
-
-  /* line 137, ../sass/_weapons.scss */
-  50% {
-    transform: rotate(-30deg);
-  }
-
-  /* line 138, ../sass/_weapons.scss */
-  100% {
-    transform: rotate(-11.5deg);
-  }
 }
 
 /* line 31, ../sass/_typog.scss */
@@ -212,21 +79,21 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-/* line 36, ../sass/_typog.scss */
+/* line 35, ../sass/_typog.scss */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Open Sans", sans-serif;
   color: #202020;
 }
 
-/* line 44, ../sass/_typog.scss */
+/* line 42, ../sass/_typog.scss */
 h1, .h1,
 h2, .h2,
 h3, .h3 {
   margin-top: 15px;
   margin-bottom: 15px;
 }
-/* line 49, ../sass/_typog.scss */
+/* line 48, ../sass/_typog.scss */
 h1 small,
 h1 .small, .h1 small,
 .h1 .small,
@@ -239,7 +106,7 @@ h3 .small, .h3 small,
   font-size: 65%;
 }
 
-/* line 55, ../sass/_typog.scss */
+/* line 53, ../sass/_typog.scss */
 h4, .h4,
 h5, .h5,
 h6, .h6 {
@@ -280,9 +147,10 @@ h6, .h6 {
 /* line 67, ../sass/_typog.scss */
 p {
   margin-bottom: 20px;
+  line-height: 20px;
 }
 
-/* line 71, ../sass/_typog.scss */
+/* line 72, ../sass/_typog.scss */
 input[type="text"] {
   height: 41px;
   text-indent: 5px;
@@ -290,7 +158,7 @@ input[type="text"] {
   vertical-align: top;
 }
 
-/* line 129, ../sass/_typog.scss */
+/* line 130, ../sass/_typog.scss */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -299,55 +167,55 @@ table {
   border-right: 0;
   margin-bottom: 15px;
 }
-/* line 137, ../sass/_typog.scss */
+/* line 138, ../sass/_typog.scss */
 table thead th {
   padding: 15px;
   font-weight: bold;
 }
-/* line 140, ../sass/_typog.scss */
+/* line 141, ../sass/_typog.scss */
 table thead th:first-child {
-  border-left: 1px solid #c5c5c5;
+  border-left: 1px solid #C5C5C5;
 }
-/* line 143, ../sass/_typog.scss */
+/* line 144, ../sass/_typog.scss */
 table thead th:last-child {
   border-bottom: 0;
-  border-right: 1px solid #c5c5c5;
+  border-right: 1px solid #C5C5C5;
 }
-/* line 149, ../sass/_typog.scss */
+/* line 150, ../sass/_typog.scss */
 table thead tr {
-  border-bottom: 1px solid #c5c5c5;
+  border-bottom: 1px solid #C5C5C5;
 }
-/* line 155, ../sass/_typog.scss */
+/* line 156, ../sass/_typog.scss */
 table tbody tr {
-  border-bottom: 1px solid #c5c5c5;
+  border-bottom: 1px solid #C5C5C5;
 }
-/* line 157, ../sass/_typog.scss */
+/* line 158, ../sass/_typog.scss */
 table tbody tr:first-child {
   border-top: 0;
 }
-/* line 162, ../sass/_typog.scss */
+/* line 163, ../sass/_typog.scss */
 table tbody td {
   padding: 15px;
 }
-/* line 165, ../sass/_typog.scss */
+/* line 166, ../sass/_typog.scss */
 table tbody td:first-child {
-  border-left: 1px solid #c5c5c5;
+  border-left: 1px solid #C5C5C5;
 }
-/* line 168, ../sass/_typog.scss */
+/* line 169, ../sass/_typog.scss */
 table tbody td:last-child {
   border-bottom: 0;
-  border-right: 1px solid #c5c5c5;
+  border-right: 1px solid #C5C5C5;
 }
-/* line 175, ../sass/_typog.scss */
+/* line 176, ../sass/_typog.scss */
 table th, table td {
   text-align: center;
 }
-/* line 177, ../sass/_typog.scss */
+/* line 178, ../sass/_typog.scss */
 table th:first-child, table td:first-child {
   text-align: left;
 }
 
-/* line 183, ../sass/_typog.scss */
+/* line 184, ../sass/_typog.scss */
 .btn {
   padding: 12px 28px;
   border: 0;
@@ -356,76 +224,222 @@ table th:first-child, table td:first-child {
   line-height: 17px;
   text-decoration: none;
 }
-/* line 89, ../sass/_typog.scss */
+/* line 90, ../sass/_typog.scss */
 .btn:hover {
   text-decoration: none;
   cursor: pointer;
 }
-/* line 187, ../sass/_typog.scss */
+/* line 188, ../sass/_typog.scss */
 .btn.btn-primary {
-  color: white;
-  background-color: #00a3ad;
+  color: #ffFFFF;
+  background-color: #00A3AD;
 }
-/* line 98, ../sass/_typog.scss */
+/* line 99, ../sass/_typog.scss */
 .btn.btn-primary:hover {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwZDBkYyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwYTNhZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #00d0dc), color-stop(100%, #00a3ad));
-  background-image: -webkit-linear-gradient(#00d0dc, #00a3ad);
   background-image: -moz-linear-gradient(#00d0dc, #00a3ad);
-  background-image: -o-linear-gradient(#00d0dc, #00a3ad);
+  background-image: -webkit-linear-gradient(#00d0dc, #00a3ad);
   background-image: linear-gradient(#00d0dc, #00a3ad);
 }
-/* line 101, ../sass/_typog.scss */
+/* line 102, ../sass/_typog.scss */
 .btn.btn-primary:active {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwYTNhZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwYTNhZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #00a3ad), color-stop(100%, #00a3ad));
-  background-image: -webkit-linear-gradient(#00a3ad, #00a3ad);
   background-image: -moz-linear-gradient(#00a3ad, #00a3ad);
-  background-image: -o-linear-gradient(#00a3ad, #00a3ad);
+  background-image: -webkit-linear-gradient(#00a3ad, #00a3ad);
   background-image: linear-gradient(#00a3ad, #00a3ad);
 }
-/* line 189, ../sass/_typog.scss */
+/* line 190, ../sass/_typog.scss */
 .btn.btn-primary.disabled {
-  background: #ececec;
-  color: #c5c5c5;
+  background: #ECECEC;
+  color: #C5C5C5;
 }
-/* line 122, ../sass/_typog.scss */
+/* line 123, ../sass/_typog.scss */
 .btn.btn-primary.disabled:hover {
   cursor: default;
-  background: #ececec;
-  color: #c5c5c5;
+  background: #ECECEC;
+  color: #C5C5C5;
 }
-/* line 193, ../sass/_typog.scss */
+/* line 194, ../sass/_typog.scss */
 .btn.btn-secondary {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U2MzMwMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Q3MzAwMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e63300), color-stop(100%, #d73000));
-  background-image: -webkit-linear-gradient(#e63300, #d73000);
   background-image: -moz-linear-gradient(#e63300, #d73000);
-  background-image: -o-linear-gradient(#e63300, #d73000);
+  background-image: -webkit-linear-gradient(#e63300, #d73000);
   background-image: linear-gradient(#e63300, #d73000);
-  color: white;
+  color: #ffFFFF;
 }
-/* line 110, ../sass/_typog.scss */
+/* line 111, ../sass/_typog.scss */
 .btn.btn-secondary:hover {
-  background: #9e2b1f;
+  background: #9E2B1F;
 }
-/* line 113, ../sass/_typog.scss */
+/* line 114, ../sass/_typog.scss */
 .btn.btn-secondary:active {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U2MzMwMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Q3MzAwMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e63300), color-stop(100%, #d73000));
-  background-image: -webkit-linear-gradient(#e63300, #d73000);
   background-image: -moz-linear-gradient(#e63300, #d73000);
-  background-image: -o-linear-gradient(#e63300, #d73000);
+  background-image: -webkit-linear-gradient(#e63300, #d73000);
   background-image: linear-gradient(#e63300, #d73000);
 }
-/* line 195, ../sass/_typog.scss */
+/* line 196, ../sass/_typog.scss */
 .btn.btn-secondary.disabled {
-  background: #ececec;
-  color: #c5c5c5;
+  background: #ECECEC;
+  color: #C5C5C5;
 }
-/* line 122, ../sass/_typog.scss */
+/* line 123, ../sass/_typog.scss */
 .btn.btn-secondary.disabled:hover {
   cursor: default;
-  background: #ececec;
-  color: #c5c5c5;
+  background: #ECECEC;
+  color: #C5C5C5;
 }
 
+/* line 16, ../sass/_weapons.scss */
+.weapon-name {
+  font-size: 20px;
+}
+
+/* line 22, ../sass/_weapons.scss */
+.weapon.weapon-scissors {
+  background: none;
+  position: relative;
+  width: 19em;
+  height: 5.25em;
+  margin: 4.33333em auto;
+}
+/* line 29, ../sass/_weapons.scss */
+.weapon.weapon-scissors .focus {
+  width: 8px;
+  height: 8px;
+  background: black;
+  position: absolute;
+  border-radius: 5px;
+  top: 42px;
+  left: 38%;
+}
+/* line 39, ../sass/_weapons.scss */
+.weapon.weapon-scissors .edge {
+  width: 19em;
+  height: 3em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 36% 100% 0;
+}
+/* line 49, ../sass/_weapons.scss */
+.weapon.weapon-scissors .edge.edge-one {
+  transform: rotate(11.5deg);
+  animation: rotate-down 2s ease-out infinite;
+}
+/* line 54, ../sass/_weapons.scss */
+.weapon.weapon-scissors .edge.edge-two {
+  transform-origin: 36% 0% 0;
+  transform: rotate(-11.5deg);
+  animation: rotate-up 2s ease-out infinite;
+  top: 3em;
+}
+/* line 59, ../sass/_weapons.scss */
+.weapon.weapon-scissors .edge.edge-two .metal {
+  top: 0;
+  border-radius: 0 0.75em 0 0;
+}
+/* line 62, ../sass/_weapons.scss */
+.weapon.weapon-scissors .edge.edge-two .metal:after {
+  top: 0;
+  border-top: 2em solid grey;
+  border-bottom: 0;
+}
+/* line 71, ../sass/_weapons.scss */
+.weapon.weapon-scissors .edge .handle {
+  width: 6em;
+  height: 3em;
+  border-radius: 1.5em;
+  border: 0.75em solid black;
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 84, ../sass/_weapons.scss */
+.weapon.weapon-scissors .edge .metal {
+  width: 13em;
+  height: 0.75em;
+  position: absolute;
+  top: 2.25em;
+  left: 6em;
+  background: grey;
+  border-radius: 0 0 0.75em 0;
+}
+/* line 97, ../sass/_weapons.scss */
+.weapon.weapon-scissors .edge .metal:after {
+  content: '';
+  display: inline-block;
+  border-bottom: 2em solid grey;
+  border-right: 4em solid transparent;
+  height: 0;
+  width: 1em;
+  position: absolute;
+  left: -1.5em;
+  bottom: 0;
+}
+/* line 116, ../sass/_weapons.scss */
+.weapon.weapon-rock img {
+  width: 200px;
+}
+/* line 121, ../sass/_weapons.scss */
+.weapon.weapon-paper {
+  padding: 20px 20px 27px 17px;
+  background: #C5C5C5;
+}
+@media (min-width: 992px) {
+  /* line 121, ../sass/_weapons.scss */
+  .weapon.weapon-paper {
+    margin: 0 60px;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 121, ../sass/_weapons.scss */
+  .weapon.weapon-paper {
+    margin: 0 90px;
+  }
+}
+/* line 133, ../sass/_weapons.scss */
+.weapon.weapon-paper .papers {
+  background-color: white;
+  height: 220px;
+  width: 150px;
+  margin-left: 7px;
+  -moz-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1), 3px 3px 0 white, 4px 4px 0 rgba(0, 0, 0, 0.125), 6px 6px 0 white, 7px 7px 0 rgba(0, 0, 0, 0.15), 9px 9px 0 white, 10px 10px 0 rgba(0, 0, 0, 0.175);
+  -webkit-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1), 3px 3px 0 white, 4px 4px 0 rgba(0, 0, 0, 0.125), 6px 6px 0 white, 7px 7px 0 rgba(0, 0, 0, 0.15), 9px 9px 0 white, 10px 10px 0 rgba(0, 0, 0, 0.175);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1), 3px 3px 0 white, 4px 4px 0 rgba(0, 0, 0, 0.125), 6px 6px 0 white, 7px 7px 0 rgba(0, 0, 0, 0.15), 9px 9px 0 white, 10px 10px 0 rgba(0, 0, 0, 0.175);
+}
+
+@keyframes rotate-down {
+  0% {
+    transform: rotate(11.5deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(11.5deg);
+  }
+}
+@keyframes rotate-up {
+  0% {
+    transform: rotate(-11.5deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(-11.5deg);
+  }
+}
 /* line 1, ../sass/_framework.scss */
 .container {
   background: none;
@@ -510,65 +524,146 @@ table th:first-child, table td:first-child {
   .col-sm-offset-2 {
     margin-left: 16.66666667%;
   }
+
+  /* line 66, ../sass/_framework.scss */
+  .col-sm-offset-3 {
+    margin-left: 25%;
+  }
 }
 @media (min-width: 992px) {
-  /* line 69, ../sass/_framework.scss */
+  /* line 72, ../sass/_framework.scss */
   .container {
     width: 970px;
   }
+
+  /* line 75, ../sass/_framework.scss */
+  .col-md-4 {
+    width: 33.33333333%;
+    float: left;
+  }
 }
 @media (min-width: 1200px) {
-  /* line 75, ../sass/_framework.scss */
+  /* line 82, ../sass/_framework.scss */
   .container {
     width: 1170px;
   }
 }
 @media (min-width: 1440px) {
-  /* line 82, ../sass/_framework.scss */
+  /* line 89, ../sass/_framework.scss */
   .container {
     width: 1400px;
   }
 }
-/* line 19, ../sass/screen.scss */
+/* line 20, ../sass/screen.scss */
 h1 {
   text-align: center;
 }
 
-/* line 23, ../sass/screen.scss */
+/* line 24, ../sass/screen.scss */
 .body {
   margin-top: 15px;
 }
 
-/* line 27, ../sass/screen.scss */
+/* line 28, ../sass/screen.scss */
 .add-user-container {
   margin-bottom: 20px;
 }
 @media (min-width: 768px) {
-  /* line 30, ../sass/screen.scss */
+  /* line 31, ../sass/screen.scss */
   .add-user-container input {
     width: 50%;
   }
 }
 
-/* line 36, ../sass/screen.scss */
+/* line 37, ../sass/screen.scss */
 .hidden {
-  display: none;
+  display: none !important;
 }
 
-/* line 40, ../sass/screen.scss */
+/* line 41, ../sass/screen.scss */
+#no-data-message {
+  margin-top: 20px;
+}
+
+/* line 45, ../sass/screen.scss */
+.game-intro {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* line 50, ../sass/screen.scss */
+.weapons-row {
+  margin-bottom: 40px;
+}
+/* line 52, ../sass/screen.scss */
+.weapons-row > div {
+  padding: 5px;
+  cursor: pointer;
+}
+/* line 55, ../sass/screen.scss */
+.weapons-row > div:hover {
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+/* line 62, ../sass/screen.scss */
+.weapon-select.selected {
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+/* line 67, ../sass/screen.scss */
+.versus {
+  padding: 0 20px;
+}
+
+/* line 71, ../sass/screen.scss */
+#play-pc-v-pc {
+  margin-bottom: 30px;
+}
+
+/* line 75, ../sass/screen.scss */
+#game-result {
+  margin-bottom: 40px;
+}
+
+/* line 79, ../sass/screen.scss */
+#play-game, #player-b-weapon, #player-a-weapon {
+  padding: 12px 28px;
+  border: 0;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 17px;
+  text-decoration: none;
+  background: black;
+  color: white;
+  margin-bottom: 40px;
+  font-size: 20px;
+  padding: 16px 30px;
+}
+/* line 90, ../sass/_typog.scss */
+#play-game:hover, #player-b-weapon:hover, #player-a-weapon:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* line 88, ../sass/screen.scss */
+#player-b-weapon:hover, #player-a-weapon:hover {
+  cursor: default;
+}
+
+/* line 93, ../sass/screen.scss */
 #leaderboard-data {
   margin-top: 40px;
 }
 
-/* line 44, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 #leaderboard-data-body .selected {
-  background: #e6f6f7;
+  background: #E6F6F7;
 }
-/* line 46, ../sass/screen.scss */
+/* line 100, ../sass/screen.scss */
 #leaderboard-data-body .selected button {
   display: none;
 }
-/* line 50, ../sass/screen.scss */
+/* line 104, ../sass/screen.scss */
 #leaderboard-data-body button {
   padding: 12px 28px;
   border: 0;
@@ -576,27 +671,29 @@ h1 {
   font-size: 16px;
   line-height: 17px;
   text-decoration: none;
-  color: white;
-  background-color: #00a3ad;
+  color: #ffFFFF;
+  background-color: #00A3AD;
 }
-/* line 89, ../sass/_typog.scss */
+/* line 90, ../sass/_typog.scss */
 #leaderboard-data-body button:hover {
   text-decoration: none;
   cursor: pointer;
 }
-/* line 98, ../sass/_typog.scss */
+/* line 99, ../sass/_typog.scss */
 #leaderboard-data-body button:hover {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwZDBkYyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwYTNhZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #00d0dc), color-stop(100%, #00a3ad));
-  background-image: -webkit-linear-gradient(#00d0dc, #00a3ad);
   background-image: -moz-linear-gradient(#00d0dc, #00a3ad);
-  background-image: -o-linear-gradient(#00d0dc, #00a3ad);
+  background-image: -webkit-linear-gradient(#00d0dc, #00a3ad);
   background-image: linear-gradient(#00d0dc, #00a3ad);
 }
-/* line 101, ../sass/_typog.scss */
+/* line 102, ../sass/_typog.scss */
 #leaderboard-data-body button:active {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwYTNhZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwYTNhZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #00a3ad), color-stop(100%, #00a3ad));
-  background-image: -webkit-linear-gradient(#00a3ad, #00a3ad);
   background-image: -moz-linear-gradient(#00a3ad, #00a3ad);
-  background-image: -o-linear-gradient(#00a3ad, #00a3ad);
+  background-image: -webkit-linear-gradient(#00a3ad, #00a3ad);
   background-image: linear-gradient(#00a3ad, #00a3ad);
 }

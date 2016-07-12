@@ -12,7 +12,7 @@
     result = game.play();
 
     // update result in UI
-    document.getElementById('result-summary').textContent = result;
+    console.log(result);
 
   }
 

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Play the game!</title>
 
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
   <!-- styles -->
   <link rel="stylesheet" type="text/css" href="assets/css/screen.css">
   <!--[if IE]>
@@ -22,46 +23,73 @@
   <!-- 2) button to wipe all user data -->
   <!-- 3) display all user data -->
 
-  <div class="container">
-    <br>
-    <a href="welcome.html">back to leaderboard</a> 
+  <div class="body container">
+    <a href="index.html">back to leaderboard</a> 
     <h1>Rock Paper Scissors</h1>
+    <div class="centered-container">
+      <h2 class="game-intro"><span id="selected-user"></span><span id="play-message">. Choose your weapon!</span></h2>
 
-    <h2><span id="selected-user"></span>. Choose your weapon!</h2>
-    <div class="row">
-      <div id="select-rock" class="col-sm-4">Rock</div>
-      <div id="select-paper" class="col-sm-4">Paper</div>
-      <div id="select-scissors" class="col-sm-4">Scissors</div>
-    </div><br><br>
-    <div>
-      <span id="play-game">Play as: <span id="player-a-weapon"></span><span>
-    </div>
-    <br>
-    <div>
-      <p>Computer is: <span id="player-b-weapon"></span></p>
-    </div><br>
-    <div id="game-result">
-      <p id="game-result-message"></p>
-    </div>
-    <br>
-    <div>
-      <h3>Your Record</h3>
-      <table id="user-data">
-        <thead>
-          <tr>
-            <th>Wins</th>
-            <th>Losses</th>
-            <th>Draws</th>
-          </tr>
-        </thead>
-        <tbody id="user-data-body">
-          <tr>
-            <td id="user-wins"></td>
-            <td id="user-losses"></td>
-            <td id="user-draws"></td>
-          </tr>
-        </tbody>
-      </table>
+      <div>
+        <span class="hidden" id="play-game">Play as <span id="user-weapon"></span>!</span>
+        <span id="computer-play" class="hidden">
+          <span><span id="player-a-weapon"></span></span>
+          <span class="versus">VS</span>
+          <span><span id="player-b-weapon"></span></span>
+        </span>
+      </div>
+      <div class="hidden" id="game-result">
+        <p id="game-result-message"></p>
+        <p>Don't forget to check your progress in the table below!</p>
+      </div>
+
+      <div class="row weapons-row">
+        <div id="select-rock" class="col-md-4 weapon-select">
+          <p class="weapon-name">Rock</p>
+          <div class="weapon weapon-rock">
+            <img src="assets/img/rock.png">
+          </div>
+        </div>
+        <div id="select-paper" class="col-md-4 weapon-select">
+          <p class="weapon-name">Paper</p>
+          <div class="weapon weapon-paper">
+            <div class="papers"></div>
+          </div>
+        </div>
+        <div id="select-scissors" class="col-md-4 weapon-select">
+          <p class="weapon-name">Scissors</p>
+          <div class="weapon weapon-scissors">
+            <div class="edge edge-one">
+              <div class="metal"></div>
+              <div class="handle"></div>
+            </div>
+            <div class="edge edge-two">
+              <div class="metal"></div>
+              <div class="handle"></div>
+            </div>
+            <div class="focus"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-sm-offset-3 col-sm-6">
+        <h2>Your Record</h2>
+        <table id="user-data">
+          <thead>
+            <tr>
+              <th>Wins</th>
+              <th>Losses</th>
+              <th>Draws</th>
+            </tr>
+          </thead>
+          <tbody id="user-data-body">
+            <tr>
+              <td id="user-wins"></td>
+              <td id="user-losses"></td>
+              <td id="user-draws"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
   

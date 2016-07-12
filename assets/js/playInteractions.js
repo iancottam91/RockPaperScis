@@ -31,12 +31,16 @@
   }
 
   document.getElementById('play-game').onclick = function() {
+    
     result = game.play(weapon);
 
-    // update result in store
-    storer.updateData(userData, result);
-    // update result in UI
-    interactions.populateUserDataTable(userData);
+
+    setTimeout(function() {
+      // update result in store
+      storer.updateData(userData, result);
+      // update result in UI
+      interactions.populateUserDataTable(userData);
+    },3000);
 
   }
 

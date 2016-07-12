@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>PC v PC</title>
-
+  
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
   <!-- styles -->
   <link rel="stylesheet" type="text/css" href="assets/css/screen.css">
   <!--[if IE]>
@@ -22,22 +23,27 @@
   <!-- 2) button to wipe all user data -->
   <!-- 3) display all user data -->
 
-  <div class="container">
-    <br>
-    <a href="welcome.html">back to leaderboard</a> 
+  <div class="body container">
+    <a href="index.html">back to leaderboard</a> 
     <h1>Rock Paper Scissors</h1>
-    <h2>Computer V Computer</h2>
-    <button id="play-pc-v-pc">Play</button>
-    <div id="results" class="row">
-      <div class="col-sm-6">
-        <span id="player-a-weapon"></span>
+    <div class="centered-container">
+      <h2 class="game-intro">Computer V Computer</h2>
+
+      <button class="btn btn-primary" id="play-pc-v-pc">Play</button>
+
+      <div>
+        <span id="computer-play" class="hidden">
+          <span><span id="player-a-weapon"></span></span>
+          <span class="versus">VS</span>
+          <span><span id="player-b-weapon"></span></span>
+        </span>
       </div>
-      <div class="col-sm-6">
-        <span id="player-b-weapon"></span>
+
+      <div class="hidden" id="game-result">
+        <p id="game-result-message"></p>
       </div>
-      <div class="col-sm-12">
-        <span id="result-summary"></span>
-      </div>
+
+      
     </div>
 
   </div>

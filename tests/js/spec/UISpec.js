@@ -25,7 +25,7 @@ describe("User Interactions:", function() {
       loadFixtures('usermessage.html');
       interactions.displayNoUserMessage();
 
-      expect($('#no-data-message')).not.toHaveClass("hidden");
+      expect($('#no-data-message').text()).toBe("Add a new user to begin playing.");
       expect($('#leaderboard-data')).toHaveClass("hidden");
       
 
@@ -36,7 +36,7 @@ describe("User Interactions:", function() {
       loadFixtures('usermessage.html');
       interactions.hideNoUserMessage();
 
-      expect($('#no-data-message')).toHaveClass("hidden");
+      expect($('#no-data-message').text()).toBe("Add a new user. You can have up to 5 users.");
       expect($('#leaderboard-data')).not.toHaveClass("hidden");
       
 
@@ -106,9 +106,18 @@ describe("User Interactions:", function() {
     it(" users can select a game weapon, by clicking on the image for one.", function(){
 
       loadFixtures('selectweapon.html');
+      expect($('#play-game')).toHaveClass('hidden');
+      expect($('#play-message').text()).toBe('. Choose your weapon!');
+
+      // select a weapon
       expect(interactions.selectWeapon('rock')).toEqual('rock');
-      expect($('#player-a-weapon').text()).toEqual('rock');
+
+      expect($('#user-weapon').text()).toEqual('rock');
       expect($('#player-b-weapon').text()).toEqual('');
+      expect($('#select-rock')).toHaveClass('selected');
+      expect($('#play-game')).not.toHaveClass('hidden');
+      expect($('#play-message').text()).toBe('. Click below to play the game!');
+
 
     });
 

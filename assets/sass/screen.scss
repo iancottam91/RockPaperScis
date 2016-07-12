@@ -4,6 +4,7 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+@import "compass/css3";
 
 * {
   -webkit-box-sizing: border-box;
@@ -11,8 +12,8 @@
   box-sizing: border-box;
 }
 
-@import "weapons";
 @import "typog";
+@import "weapons";
 @import "framework";
 
 
@@ -34,12 +35,65 @@ h1{
 }
 
 .hidden{
-	display: none;
+	display: none !important;
+}
+
+#no-data-message{
+  margin-top: 20px;
+}
+
+.game-intro{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.weapons-row{
+  margin-bottom: 40px;
+  > div {
+    padding: 5px;
+    cursor: pointer;
+    &:hover{
+      outline: -webkit-focus-ring-color auto 5px;
+    }
+  }
+}
+
+.weapon-select{
+  &.selected{
+    outline: -webkit-focus-ring-color auto 5px;
+  }
+}
+
+.versus{
+  padding: 0 20px;
+}
+
+#play-pc-v-pc{
+  margin-bottom: 30px;
+}
+
+#game-result{
+  margin-bottom: 40px;
+}
+
+#play-game, #player-b-weapon, #player-a-weapon{
+  @include btn();
+  background: black;
+  color: white;
+  margin-bottom: 40px;
+  font-size: 20px;
+  padding: 16px 30px;
+}
+#player-b-weapon, #player-a-weapon{
+  &:hover{
+    cursor: default;
+  }
 }
 
 #leaderboard-data{
   margin-top: 40px;
 }
+
 #leaderboard-data-body{
 	.selected{
 		background: $pale-teal;

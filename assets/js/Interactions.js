@@ -24,8 +24,24 @@ function Interactions () {
 
 		// click on a weapon - update UI and return weapon value for use in the game object
 		selectWeapon: function(weapon){
-			document.getElementById('player-a-weapon').textContent= weapon;
+			document.getElementById('user-weapon').textContent= weapon;
 			document.getElementById('player-b-weapon').textContent= "";
+
+			
+			var weaponContainers = document.getElementsByClassName('weapon-select');
+
+			for(var i=0;i<weaponContainers.length; i++){
+				var weapClasses = weaponContainers[i].className
+				if(weapClasses.indexOf('select') >= 0){
+					weaponContainers[i].className = "col-md-4 weapon-select";
+				}
+			}
+		
+			document.getElementById('select-' + weapon).className = 'col-md-4 weapon-select selected';
+			document.getElementById('play-game').className = "";
+			document.getElementById('play-message').textContent = '. Click below to play the game!'
+			document.getElementById('computer-play').className = "hidden";
+
 			return weapon;
 
 		},
@@ -113,11 +129,11 @@ function Interactions () {
 		displayNoUserMessage: function(){
 			document.getElementById("leaderboard-data").className = "hidden";
 			document.getElementById("ready-to-play").className = "hidden";
-			document.getElementById("no-data-message").className = ""
+			document.getElementById("no-data-message").textContent = "Add a new user to begin playing."
 		},
 
 		hideNoUserMessage: function(){
-			document.getElementById("no-data-message").className = "hidden";
+			document.getElementById("no-data-message").textContent = "Add a new user. You can have up to 5 users.";
 			document.getElementById("leaderboard-data").className = "";
 			document.getElementById("ready-to-play").className = "";
 		}
