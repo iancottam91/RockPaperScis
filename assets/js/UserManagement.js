@@ -41,6 +41,27 @@ function Storage(){
 
     },
 
+    getUserData : function(username){
+
+      function checkName(ele){
+        // this will use name value from function parameter
+        if(ele.name === username){
+          return true;
+        } else {
+          return false;
+        }
+      }
+      
+      var allUserData = sessionStorage.getItem("rps_user_data");
+
+      if(allUserData !== undefined && allUserData !== null){
+        users = JSON.parse( allUserData );
+        return users.filter(checkName)[0];
+      } else{
+        return false;
+      }
+    },
+
     // add a new User to storage
     addUser : function(data){
 

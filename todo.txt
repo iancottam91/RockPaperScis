@@ -1,8 +1,6 @@
 Game play:
 
 1) populate user record table
-- need fixture for the user record table
-- 
 - need a get user data function to retreive record
 
 

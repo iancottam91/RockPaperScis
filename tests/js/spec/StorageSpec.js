@@ -109,6 +109,27 @@ describe("A Storage object ", function() {
 
     });
 
+    it("It gets a specific user's data for display", function(){
+
+      var userTwoData = {
+        name : 'Ben Smith',
+        wins : 0,
+        losses: 0,
+        weaponPlayed : {
+          'rock' : 0,
+          'paper' : 0,
+          'scissors' : 0
+        }
+      }
+
+      storer.addUser(userTwoData);
+
+      storer.getUserData('Jo Smith');
+
+      expect( storer.getUserData('Jo Smith') ).toEqual( userOneData );
+
+    });
+
     it("It gets all user data for display.", function(){
 
 

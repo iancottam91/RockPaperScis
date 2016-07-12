@@ -94,9 +94,23 @@ describe("User Interactions:", function() {
 
   describe("Game play interactions", function(){
 
+    var userData = {
+      name : 'Jo Smith',
+      wins : 10,
+      losses: 3,
+      weaponPlayed : {
+        'rock' : 0,
+        'paper' : 0,
+        'scissors' : 0
+      }
+    }
+
     it(" can display data for a selected user.", function(){
 
-      expect('a').toEqual('b');
+      loadFixtures('userdata.html');
+      interactions.populateUserDataTable(userData);
+      expect($('#user-wins').text()).toEqual('10');
+      expect($('#user-losses').text()).toEqual('3');
 
     });
 

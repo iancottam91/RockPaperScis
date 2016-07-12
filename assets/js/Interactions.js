@@ -22,6 +22,18 @@ function Interactions () {
 
 		},
 
+		populateUserDataTable: function(userData){
+
+			var userWins = document.getElementById('user-wins');
+			var userWinsTxt = document.createTextNode(userData.wins);
+			userWins.appendChild(userWinsTxt);
+
+			var userLosses = document.getElementById('user-losses');
+			var userLossesTxt = document.createTextNode(userData.losses);
+			userLosses.appendChild(userLossesTxt);
+
+		},
+
 		setSelectedUsername: function(username){
 
 			if(username !== ""){
