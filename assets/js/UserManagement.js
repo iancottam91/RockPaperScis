@@ -5,11 +5,7 @@ function User(name){
     name : name,
     wins : 0,
     losses: 0,
-    weaponPlayed : {
-      'rock' : 0,
-      'paper' : 0,
-      'scissors' : 0
-    }
+    draws: 0
   }
 
   return {
@@ -55,11 +51,43 @@ function Storage(){
       var allUserData = sessionStorage.getItem("rps_user_data");
 
       if(allUserData !== undefined && allUserData !== null){
-        users = JSON.parse( allUserData );
+        var users = JSON.parse( allUserData );
         return users.filter(checkName)[0];
       } else{
         return false;
       }
+    },
+
+    // take a user data object and overwrite existing object with it
+    setUserData: function(data){
+
+      // get all data
+      // remove existing piece of data
+      // add the new one
+
+      var users;
+
+      function removeExisitingEntry(ele){
+        // this will use name value from function parameter
+        if(ele.name === data.name){
+          return false;
+        } else {
+          return true;
+        }
+      }
+
+      var allUserData = sessionStorage.getItem("rps_user_data");
+
+      if(allUserData !== undefined && allUserData !== null){
+        users = JSON.parse( allUserData );
+        users = users.filter(removeExisitingEntry);
+        users.push(data);
+
+        sessionStorage.setItem("rps_user_data", JSON.stringify(users) );
+      } else{
+        return false;
+      }
+
     },
 
     // add a new User to storage
@@ -136,6 +164,27 @@ function Storage(){
     // get all user data as JSON array
     getAllUsers : function(){
       return JSON.parse( sessionStorage.getItem("rps_user_data") );
+    },
+
+    // update a users data based on a result
+    // data - the current data
+    // the result
+    updateData: function(data, result){
+
+      // add a draw
+      if(result === "draw"){
+        data.draws += 1;
+        // set this to storage
+        this.setUserData(data);
+        // console.log(data);
+      } else if (result === "playerA"){
+        data.wins += 1;
+        this.setUserData(data);
+      } else if (result === "playerB"){
+        data.losses += 1;
+        this.setUserData(data);
+      }
+
     }
 
   }

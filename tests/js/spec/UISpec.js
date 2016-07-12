@@ -10,22 +10,14 @@ describe("User Interactions:", function() {
       name : 'Jo Smith',
       wins : 0,
       losses: 0,
-      weaponPlayed : {
-        'rock' : 0,
-        'paper' : 0,
-        'scissors' : 0
-      }
+      draws: 0
     }
 
     var userDataTwo = {
       name : 'Ben Smith',
       wins : 1,
       losses: 3,
-      weaponPlayed : {
-        'rock' : 0,
-        'paper' : 0,
-        'scissors' : 0
-      }
+      draws: 0
     }
 
     it(" can display a message saying there is no user data", function() {
@@ -57,7 +49,7 @@ describe("User Interactions:", function() {
 
       interactions.addLeaderboardEntry(userData, leaderboard);
 
-      expect($('#leaderboard-data-body tr td').length).toEqual(4);
+      expect($('#leaderboard-data-body tr td').length).toEqual(5);
       expect($('#leaderboard-data-body tr:first-child').data('row-username')).toEqual('Jo Smith');
       expect($('#leaderboard-data-body tr td:first-child').text()).toEqual('Jo Smith');
       expect($('#leaderboard-data-body tr td:nth-child(2)').text()).toEqual('0');
@@ -98,11 +90,7 @@ describe("User Interactions:", function() {
       name : 'Jo Smith',
       wins : 10,
       losses: 3,
-      weaponPlayed : {
-        'rock' : 0,
-        'paper' : 0,
-        'scissors' : 0
-      }
+      draws: 0
     }
 
     it(" can display data for a selected user.", function(){
@@ -111,12 +99,16 @@ describe("User Interactions:", function() {
       interactions.populateUserDataTable(userData);
       expect($('#user-wins').text()).toEqual('10');
       expect($('#user-losses').text()).toEqual('3');
+      expect($('#user-draws').text()).toEqual('0');
 
     });
 
     it(" users can select a game weapon, by clicking on the image for one.", function(){
 
-      expect('a').toEqual('b');
+      loadFixtures('selectweapon.html');
+      expect(interactions.selectWeapon('rock')).toEqual('rock');
+      expect($('#player-a-weapon').text()).toEqual('rock');
+      expect($('#player-b-weapon').text()).toEqual('');
 
     });
 

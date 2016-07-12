@@ -14,10 +14,54 @@
 .container:after {
   clear: both;
 }
+
+.centered-container{
+  text-align: center;
+}
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.row:before, .row:after {
+  content: " ";
+  display: table;
+}
+
+.row:after {
+  clear: both;
+}
+
+.col-sm-4{
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 @media (min-width: 768px) {
 
   .container {
     width: 750px;
+  }
+  .col-sm-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .col-sm-6 {
+    width: 50%;
+    float: left;
+  }
+  .col-sm-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .col-sm-12 {
+    width: 100%;
+    float: left;
+  }
+  .col-sm-offset-2 {
+    margin-left: 16.66666667%;
   }
 }
 @media (min-width: 992px) {

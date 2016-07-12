@@ -1,10 +1,32 @@
-// Headings
-// -------------------------
 
 $font-size-body: 15px;
 $font-color: #202020;
 $line-height-base: 15px;
-$font-family: Sans-Serif;
+$font-family: 'Open Sans', sans-serif;;
+
+// variables
+$white: #ffFFFF;
+$black: #000000;
+// $red: #FF2b1F;
+$red: #d73000;
+
+// secondary
+$pale-red: #FFB9AF;
+$light-red: #FF8273;
+$dark-red: #9E2B1F;
+$pale-teal: #E6F6F7;
+$light-teal: #B3E3E6;
+$teal: #00A3AD;
+
+// grey scale
+$ten-black: #ECECEC;
+$thirty-black: #C5C5C5;
+$fifty-black: #9B9B9B;
+
+// fonts:
+$font-color: #202020;
+$font-size-body: 16px;
+
 
 body{
   font-family: $font-family;
@@ -13,7 +35,7 @@ body{
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: $font-family;
-  font-weight: bold;
+  // font-weight: bold;
   color: $font-color;
 }
 
@@ -35,17 +57,143 @@ h6, .h6 {
   margin-bottom: ($line-height-base / 2);
 }
 
-h1, .h1 { font-size: $font-size-body*2; }
+h1, .h1 { font-size: $font-size-body*2.4; }
 h2, .h2 { font-size: $font-size-body*1.8; }
 h3, .h3 { font-size: $font-size-body*1.6; }
 h4, .h4 { font-size: $font-size-body*1.4; }
 h5, .h5 { font-size: $font-size-body*1.2; }
 h6, .h6 { font-size: $font-size-body; }
 
-table{
+p{
+  margin-bottom: 20px;
+}
 
-  th, td{
-    padding: 5px 10px;
-      border: 1px solid $font-color;
+input[type="text"]{
+  height: 41px;
+  text-indent: 5px;
+  // float: left;
+  // margin-right: 4px;
+  display: inline-block;
+  vertical-align: top;
+  // border-color: $thirty-black;
+}
+
+
+@mixin btn(){
+  padding: 12px 28px;
+  border: 0;
+  display: inline-block;
+  font-size: $font-size-body;
+  line-height: $font-size-body + 1;
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+@mixin btn-primary(){
+    color: $white;
+    background-color: $teal;
+    &:hover{
+      @include background-image(linear-gradient(#00D0DC, $teal));
+    }
+    &:active{
+     @include background-image(linear-gradient($teal, $teal));
+    }
+}
+
+@mixin btn-secondary(){
+    // background: $red linear-gradient(#e63300, $red, #e63300);
+    @include background-image(linear-gradient(#e63300, $red));
+    color: $white;
+    &:hover{
+      background: $dark-red;
+    }
+    &:active{
+      // background: $red linear-gradient(#e63300, $red, #e63300);
+      @include background-image(linear-gradient(#e63300, $red));
+    }
+}
+
+@mixin btn-disabled(){
+  background: $ten-black;
+  color: $thirty-black;
+  &:hover{
+    cursor: default;
+    background: $ten-black;
+    color: $thirty-black;
+  }
+}
+
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+  border-top: 5px solid $red;
+  border-left: 0;
+  border-right: 0;
+  margin-bottom: 15px;
+  thead{    
+    th{
+      // padding: 10px;
+      padding: 15px;
+      &:first-child{
+        border-left: 1px solid $thirty-black;
+      }
+      &:last-child{
+        border-bottom: 0;
+        border-right: 1px solid $thirty-black; 
+      }
+      font-weight: bold;
+    }
+    tr{
+      border-bottom: 1px solid $thirty-black;
+    }
+  }
+  tbody{
+      
+    tr{
+      border-bottom: 1px solid $thirty-black;        
+      &:first-child{ 
+        border-top: 0;
+      }
+    }
+
+    td{
+
+      padding: 15px;
+      &:first-child{
+        border-left: 1px solid $thirty-black;
+      }
+      &:last-child{
+        border-bottom: 0;
+        border-right: 1px solid $thirty-black; 
+      }
+    }
+  }
+
+  th,td{
+    text-align: center;
+    &:first-child{
+      text-align: left;
+    }
+  }
+}
+
+.btn{
+
+  @include btn();
+
+  &.btn-primary{
+    @include btn-primary();
+    &.disabled{
+      @include btn-disabled();
+    }
+  }
+  &.btn-secondary{
+    @include btn-secondary();
+    &.disabled{
+      @include btn-disabled();
+    }
   }
 }

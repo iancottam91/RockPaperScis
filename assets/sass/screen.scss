@@ -16,18 +16,39 @@
 @import "framework";
 
 
-div{
-  // background: pink;
+h1{
+  text-align: center;
+}
+
+.body{
+  margin-top: 15px;
+}
+
+.add-user-container{
+  margin-bottom: 20px;
+  @media (min-width: 768px) {
+    input{ 
+      width: 50%;
+    }
+  }
 }
 
 .hidden{
 	display: none;
 }
+
+#leaderboard-data{
+  margin-top: 40px;
+}
 #leaderboard-data-body{
 	.selected{
-		background: #ccc;
+		background: $pale-teal;
 		button{
 			display: none;
 		}
 	}
+  button{
+    @include btn();
+    @include btn-primary();
+  }
 }

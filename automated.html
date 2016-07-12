@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PC v PC</title>
+
+  <!-- styles -->
+  <link rel="stylesheet" type="text/css" href="assets/css/screen.css">
+  <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="assets/css/ie.css">
+  <![endif]-->
+
+  <!-- scripts -->
+  <script src="assets/js/UserManagement.js" type="text/javascript"></script>
+  <script src="assets/js/Interactions.js" type="text/javascript"></script>
+  <script src="assets/js/Game.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+  <!-- 1) form to create a user -->
+  <!-- 2) button to wipe all user data -->
+  <!-- 3) display all user data -->
+
+  <div class="container">
+    <br>
+    <a href="welcome.html">back to leaderboard</a> 
+    <h1>Rock Paper Scissors</h1>
+    <h2>Computer V Computer</h2>
+    <button id="play-pc-v-pc">Play</button>
+    <div id="results" class="row">
+      <div class="col-sm-6">
+        <span id="player-a-weapon"></span>
+      </div>
+      <div class="col-sm-6">
+        <span id="player-b-weapon"></span>
+      </div>
+      <div class="col-sm-12">
+        <span id="result-summary"></span>
+      </div>
+    </div>
+
+  </div>
+  
+  <script src="assets/js/playInteractionsPCOnly.js" type="text/javascript"></script>
+
+</body>
+</html>

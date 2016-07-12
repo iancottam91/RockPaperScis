@@ -22,15 +22,24 @@ function Interactions () {
 
 		},
 
+		// click on a weapon - update UI and return weapon value for use in the game object
+		selectWeapon: function(weapon){
+			document.getElementById('player-a-weapon').textContent= weapon;
+			document.getElementById('player-b-weapon').textContent= "";
+			return weapon;
+
+		},
+
 		populateUserDataTable: function(userData){
 
 			var userWins = document.getElementById('user-wins');
-			var userWinsTxt = document.createTextNode(userData.wins);
-			userWins.appendChild(userWinsTxt);
+			userWins.textContent = userData.wins;
 
 			var userLosses = document.getElementById('user-losses');
-			var userLossesTxt = document.createTextNode(userData.losses);
-			userLosses.appendChild(userLossesTxt);
+			userLosses.textContent = userData.losses;
+
+			var userDraws = document.getElementById('user-draws');
+			userDraws.textContent = userData.draws;
 
 		},
 
@@ -59,20 +68,27 @@ function Interactions () {
 			// create a new div element 
 		 	// and give it some content 
 		  var newRow = document.createElement("tr"); 
-
 		  newRow.setAttribute('data-row-username', userData.name);
 
+		  // name field
 		  var newNameField = document.createElement("td"); 
 		  var newNameContent = document.createTextNode(userData.name); 
 		  newNameField.appendChild(newNameContent);
 
+		  // win field
 		  var newWinField = document.createElement("td"); 
 		  var newWinContent = document.createTextNode(userData.wins); 
 		  newWinField.appendChild(newWinContent);
 
+		  // loss field
 		  var newLossField = document.createElement("td"); 
 		  var newLossContent = document.createTextNode(userData.losses); 
 		  newLossField.appendChild(newLossContent);
+
+		  // draw field
+		  var newDrawField = document.createElement("td"); 
+		  var newDrawContent = document.createTextNode(userData.draws); 
+		  newDrawField.appendChild(newDrawContent);
 
 		  var selectField = document.createElement("td"); 
 		  var selectButton = document.createElement("button");
@@ -86,6 +102,7 @@ function Interactions () {
 		  newRow.appendChild(newNameField); //add the text node to the newly created div. 
 		  newRow.appendChild(newWinField);
 		  newRow.appendChild(newLossField);
+		  newRow.appendChild(newDrawField);
 		  newRow.appendChild(selectField);
 
 		  // add the newly created element and its content into the DOM 

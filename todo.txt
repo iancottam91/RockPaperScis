@@ -1,21 +1,5 @@
 Game play:
 
-1) populate user record table
-- need a get user data function to retreive record
-
-
-2) play the game, then update values in storage
-- need an update user function in Storage after each game
-
-
-
-
-
-
-
-
-
-
 
 - UI
 - stop scissors from snipping when you hover over them
@@ -27,7 +11,6 @@ Odd jobs:
 
 - change 'populateTable' to populateLeaderboard
 - remove repeated code from 'Storage' function
-- enter in text box to add user
 
 Storage:
 

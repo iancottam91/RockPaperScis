@@ -12,11 +12,7 @@ describe("A Storage object ", function() {
       name : 'Jo Smith',
       wins : 0,
       losses: 0,
-      weaponPlayed : {
-        'rock' : 0,
-        'paper' : 0,
-        'scissors' : 0
-      }
+      draws: 0
     }
     
     beforeEach(function(){
@@ -74,11 +70,7 @@ describe("A Storage object ", function() {
         name : 'Ben Smith',
         wins : 0,
         losses: 0,
-        weaponPlayed : {
-          'rock' : 0,
-          'paper' : 0,
-          'scissors' : 0
-        }
+        draws: 0
       }
 
       // create second user and save it to the storage
@@ -115,11 +107,7 @@ describe("A Storage object ", function() {
         name : 'Ben Smith',
         wins : 0,
         losses: 0,
-        weaponPlayed : {
-          'rock' : 0,
-          'paper' : 0,
-          'scissors' : 0
-        }
+        draws: 0
       }
 
       storer.addUser(userTwoData);
@@ -137,11 +125,7 @@ describe("A Storage object ", function() {
         name : 'Ben Smith',
         wins : 0,
         losses: 0,
-        weaponPlayed : {
-          'rock' : 0,
-          'paper' : 0,
-          'scissors' : 0
-        }
+        draws: 0
       }
 
       storer.addUser(userTwoData);
@@ -149,6 +133,80 @@ describe("A Storage object ", function() {
       expect( storer.getAllUsers() ).toEqual([userOneData, userTwoData]);
 
     });
+
+    it("It can update a user's data in the storage", function(){
+
+
+      var userTwoData = {
+        name : 'Ben Smith',
+        wins : 0,
+        losses: 0,
+        draws: 1
+      }
+      storer.addUser(userTwoData);
+
+      var userTwoData = {
+        name : 'Jo Smith',
+        wins : 1,
+        losses: 2,
+        draws: 3
+      }
+
+      storer.setUserData(userTwoData);
+
+      console.log( storer.getUserData('Jo Smith') );
+
+      expect(storer.getUserData('Jo Smith')).toEqual(userTwoData);
+
+
+    });
+
+    // describe("It can update user's data based on results", function(){
+
+      it(" by adding a draw when there is a draw", function(){
+
+        var result = 'draw';
+        var updatedData = {
+          name : 'Jo Smith',
+          wins : 0,
+          losses: 0,
+          draws: 1
+        }
+
+        storer.updateData(userOneData, result);
+        expect( storer.getUserData(userOneData.name) ).toEqual(updatedData);
+
+      });
+
+      it(" by adding a win when they win", function(){
+
+        var result = 'playerA';
+        var updatedData = {
+          name : 'Jo Smith',
+          wins : 1,
+          losses: 0,
+          draws: 1
+        }
+
+        storer.updateData(userOneData, result);
+        expect( storer.getUserData(userOneData.name) ).toEqual(updatedData);
+      });
+      
+      it(" by adding a loss when they loose", function(){
+
+        var result = 'playerB';
+        var updatedData = {
+          name : 'Jo Smith',
+          wins : 1,
+          losses: 1,
+          draws: 1
+        }
+
+        storer.updateData(userOneData, result);
+        expect( storer.getUserData(userOneData.name) ).toEqual(updatedData);
+      });
+
+    // });
   
   });
 

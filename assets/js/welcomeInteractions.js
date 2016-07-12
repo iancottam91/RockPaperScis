@@ -6,6 +6,17 @@
 
   // take user data and populate the table
 
+  function processForm(e) {
+    if (e.preventDefault) e.preventDefault();
+    return false;
+  }
+
+  var form = document.getElementById('add-user-form');
+  if (form.attachEvent) {
+      form.attachEvent("submit", processForm);
+  } else {
+      form.addEventListener("submit", processForm);
+  }
   
   // add user when clicking the add user btn
 	document.getElementById('add-user-button').onclick = function() {
