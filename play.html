@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Welcome</title>
+  <title>Play the game!</title>
 
   <!-- styles -->
   <link rel="stylesheet" type="text/css" href="assets/css/screen.css">
@@ -21,43 +21,28 @@
   <!-- 2) button to wipe all user data -->
   <!-- 3) display all user data -->
 
-  <div class="container">      
+  <div class="container">
+    <br>
+    <a href="welcome.html">back to leaderboard</a> 
     <h1>Rock Paper Scissors</h1>
 
-    <p id="no-data-message">Add a new user to begin playing.</p>
-    <br>
+    <h2><span id="selected-user"></span>. Choose your weapon!</h2>
     <div>
-      <input id="user-name-field" type="text">
-      <button id="add-user-button">Add User</button>
-    </div><br>
-    <div id="leaderboard-data">
-      <table>
+      <h3>Your Record</h3>
+      <table id="leaderboard-data">
         <thead>
           <tr>
-            <th>User Name</th>
             <th>Wins</th>
             <th>Losses</th>
-            <th>Action</th>
           </tr>
         </thead>
         <tbody id="leaderboard-data-body">
-          <tr></tr>
-          <tr></tr>
-          <tr></tr>
-          <tr></tr>
         </tbody>
-      </table><br>
-      <div>
-        <button id="delete-users">Delete User Data</button>
-      </div>
-    </div>
-    <br>
-    <div id="ready-to-play">
-      <p><a href="play.html">Begin playing as <span id="selected-user"></span></a></p>
+      </table>
     </div>
   </div>
   
-  <script src="assets/js/welcomeInteractions.js" type="text/javascript"></script>
+  <script src="assets/js/playInteractions.js" type="text/javascript"></script>
 
 </body>
 </html>

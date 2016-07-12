@@ -58,6 +58,16 @@ describe("A Storage object ", function() {
 
     });
 
+    it("It sets and gets the selected user to storage", function() {
+
+      storer.setSelectedUser('Jo Smith');
+      expect( store['rps_user_selected'] ).toEqual('Jo Smith');
+      expect( storer.getSelectedUser()).toEqual('Jo Smith');
+
+
+    });
+
+
     it("It adds a user to the exisiting data if there is some user data.", function() {
 
       var userTwoData = {
