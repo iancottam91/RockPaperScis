@@ -23,3 +23,11 @@ div{
 .hidden{
 	display: none;
 }
+#leaderboard-data-body{
+	.selected{
+		background: #ccc;
+		button{
+			display: none;
+		}
+	}
+}

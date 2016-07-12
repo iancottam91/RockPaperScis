@@ -320,3 +320,12 @@ table th, table td {
 .hidden {
   display: none;
 }
+
+/* line 27, ../sass/screen.scss */
+#leaderboard-data-body .selected {
+  background: #ccc;
+}
+/* line 29, ../sass/screen.scss */
+#leaderboard-data-body .selected button {
+  display: none;
+}

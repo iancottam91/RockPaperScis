@@ -28,6 +28,19 @@ function Storage(){
  
   return{
 
+    // set selected user - keep this as a separate property for simplicity 
+    setSelectedUser : function(name){
+
+      sessionStorage.setItem( "rps_user_selected", name);
+
+    },
+
+    getSelectedUser : function(){
+
+      return sessionStorage.getItem( "rps_user_selected");
+
+    },
+
     // add a new User to storage
     addUser : function(data){
 
