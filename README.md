@@ -1,55 +1,25 @@
 # RockPaperScis
 
-## Testing framework:
+## Build instructions
 
-- Jasmine - test all JS with this TDD/BDD framework
-- css tests, create static views
+- Clone the code
+- Open a terminal at the project root directory
+- run npm install
+- run sudo node index.js
 
-## Design: 
+This will run the app on port 80. Make sure you have nothing else running on port 80!
 
-### How to build the JS?
+Alternatively you can change the port number used in index.js
 
-Rock, paper and scissor object?
-Weapon object that acts as any of them?
+- Hosted URL: https://blooming-island-72413.herokuapp.com/
 
-Basic level:
+## Running the tests
 
-1) Choose a weapon
-2) Play the game
-3) win or lose?
+- Once the app is running, you can view the tests at:
 
-- set logic for winning and loosing
-- think how to make this extensible
+/tests/js/SpecRunner.html
+/tests/js/SpecRunnerUi.html
 
-IDEAS:
-- db to keep scoreline? Necessary to play for an hour
-- Where to show off?
-
-### Visual
-
-#### Gameplay
-- three column layout, item per column
-- clicking an option will grey/fade out other items
-- the one you click slides to the left of the screen to fill half width.
-- there is a countdown and the computer loads his option randomly in the RHS
-- perhaps flick through the options during countdown
-- Green mesage for win, yellow for draw, red for loss
-
-#### Weapons
-- CCS transitions for snipping scissors
-- stack of paper and take the top sheet
-- static rock probably
-
-#### PC V PC
-
-- Could have LHS and RHS flash through all the images before stopping on the one selected, like a fruit machine.
-
-### Hours of fun
-
-- Store results in Local storage
-
-#### AI
-
-- check your past plays and choose the option that will beat most of them
-- play the option that beats your last attempt
-- easy - completely random
+- Hosted URLs:
+https://blooming-island-72413.herokuapp.com/tests/js/SpecRunner.html
+https://blooming-island-72413.herokuapp.com/tests/js/SpecRunnerUI.html
