@@ -23,3 +23,14 @@ Alternatively you can change the port number used in index.js
 - Hosted URLs:
 https://blooming-island-72413.herokuapp.com/tests/js/SpecRunner.html
 https://blooming-island-72413.herokuapp.com/tests/js/SpecRunnerUI.html
+
+## Target browsers:
+
+- The tests should be run using google chrome
+- This application will run on ...
+
+## Technical Summary:
+
+- Sass for CSS
+- Local storage to hold user data
+- Jasmine for tests
