@@ -2,9 +2,16 @@
   "name": "Rock-Paper-Scissors-App",
   "version": "1.0.0",
   "description": "RPS Site",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "'Ian <'icottam@msn.com'>",
+  "license": "'MIT'",
   "dependencies": {
     "express": "4.13.4"
   },
-  "author": "'Ian <'icottam@msn.com'>",
-  "license": "'MIT'"
+  "engines": {
+    "node": "4.1.1"
+  },
 }
