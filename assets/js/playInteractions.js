@@ -3,7 +3,6 @@
   var storer = Storage();
   var interactions = Interactions();
   var game = Game();
-  var weapon;
   var result;
 
 	// user selected value from storage on page load
@@ -17,21 +16,14 @@
 
   // attach event listeners:
 
-  document.getElementById('select-rock').onclick = function() {
-    interactions.selectWeapon('rock');
-    weapon = 'rock';
-  }
-  document.getElementById('select-paper').onclick = function() {
-    interactions.selectWeapon('paper');
-    weapon = 'paper';
-  }
-  document.getElementById('select-scissors').onclick = function() {
-    interactions.selectWeapon('scissors');
-    weapon = 'scissors';
-  }
+  interactions.attachSelectWeapenEvents();
 
   document.getElementById('play-game').onclick = function() {
+
+    interactions.detachSelectWeapenEvents();
     
+    var weapon = document.getElementById('user-weapon').textContent;
+
     result = game.play(weapon);
 
 
@@ -41,6 +33,11 @@
       // update result in UI
       interactions.populateUserDataTable(userData);
     },3000);
+
+    setTimeout(function(){
+      // add the interactions back
+      interactions.attachSelectWeapenEvents();
+    }, 5000);
 
   }
 

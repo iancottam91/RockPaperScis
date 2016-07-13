@@ -118,6 +118,8 @@ function Game () {
 
       document.getElementById('player-b-weapon').textContent = "3";
 
+      // remove ability to click weapons
+
 
       setTimeout(function() {
         document.getElementById('player-b-weapon').textContent = "2"

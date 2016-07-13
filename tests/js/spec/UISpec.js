@@ -115,6 +115,30 @@ describe("User Interactions:", function() {
       draws: 0
     }
 
+
+    it(" can attach select weapon events.", function(){
+
+      loadFixtures('selectweapon.html');
+      interactions.attachSelectWeapenEvents();
+      $('#select-rock').click();
+      expect( $('#user-weapon').text() ).toBe('rock');
+      
+    });
+
+    it(" can detach select weapon events.", function(){
+
+      loadFixtures('selectweapon.html');
+      interactions.attachSelectWeapenEvents();
+      $('#select-rock').click();
+      expect( $('#user-weapon').text() ).toBe('rock');
+
+      interactions.detachSelectWeapenEvents();
+      $('#select-paper').click();
+      expect( $('#user-weapon').text() ).toBe('rock');
+
+
+    });
+
     it(" can display data for a selected user.", function(){
 
       loadFixtures('userdata.html');

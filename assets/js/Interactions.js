@@ -46,6 +46,38 @@ function Interactions () {
 
 		},
 
+		detachSelectWeapenEvents: function(){
+
+			var interactions = this;
+
+			document.getElementById('select-rock').onclick = function() {
+
+		  }
+		  document.getElementById('select-paper').onclick = function() {
+
+		  }
+		  document.getElementById('select-scissors').onclick = function() {
+
+		  }
+
+		},
+
+		attachSelectWeapenEvents: function(){
+
+			var interactions = this;
+
+			document.getElementById('select-rock').onclick = function() {
+		    interactions.selectWeapon('rock');
+		  }
+		  document.getElementById('select-paper').onclick = function() {
+		    interactions.selectWeapon('paper');
+		  }
+		  document.getElementById('select-scissors').onclick = function() {
+		    interactions.selectWeapon('scissors');
+		  }
+
+		},
+
 		displayInvalidUserMessage: function(){
 
 			document.getElementById('invalid-user-message').className = "";
