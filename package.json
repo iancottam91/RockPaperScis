@@ -1,0 +1,10 @@
+{
+  "name": "Rock-Paper-Scissors-App",
+  "version": "1.0.0",
+  "description": "RPS Site",
+  "dependencies": {
+    "express": "4.13.4"
+  },
+  "author": "'Ian <'icottam@msn.com'>",
+  "license": "'MIT'"
+}
