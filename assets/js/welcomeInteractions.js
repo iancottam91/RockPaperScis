@@ -23,22 +23,28 @@
 
 		var userName = document.getElementById('user-name-field').value;
 		user = User(userName);
-		storer.addUser(user.getData());
 
-		// populate the table
-		// handle error message
-		interactions.populateTable(storer.getAllUsers());
+		var canAddUser = storer.addUser(user.getData());
 
-		// store selected user
-		storer.setSelectedUser(user.getData().name);
+		if(canAddUser){
+			interactions.hideInvalidUserMessage();
+			// populate the table
+			interactions.populateTable(storer.getAllUsers());
 
-		// present selected user
-		interactions.setSelectedUsername(user.getData().name);
+			// store selected user
+			storer.setSelectedUser(user.getData().name);
+
+			// present selected user
+			interactions.setSelectedUsername(user.getData().name);
+		} else {
+			interactions.displayInvalidUserMessage();
+		}
 
 	}
 
 	// delete all users when click the delete user button
 	document.getElementById('delete-users').onclick = function() {
+		interactions.hideInvalidUserMessage();
   	storer.deleteAllUsers();
   	interactions.populateTable(storer.getAllUsers());
 	}

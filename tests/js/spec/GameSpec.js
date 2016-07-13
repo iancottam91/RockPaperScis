@@ -74,27 +74,93 @@ describe("A Game object ", function() {
     it("can add a result message to the UI", function(){
 
       loadFixtures('play.html');
-      game.updateResultToUi('You drew! Better play again. You played paper and the computer played paper.');
+      game.updateResultToUi('You drew! Better play again. You played paper and the computer played paper.', 'draw');
       jasmine.clock().tick(3000);
       expect($('#game-result-message').text()).toBe('You drew! Better play again. You played paper and the computer played paper.');
+      expect($('#game-result-message')).toHaveClass('draw');
 
     });
 
-    it("complete a RPS game when you click the play button", function(){
+    it("can add a result message to the UI for a win", function(){
 
       loadFixtures('play.html');
+      game.updateResultToUi('Well done! You won. You played paper and the computer played rock.', 'playerA');
+      jasmine.clock().tick(3000);
+      expect($('#game-result-message').text()).toBe('Well done! You won. You played paper and the computer played rock.');
+      expect($('#game-result-message')).toHaveClass('win');
+
+    });
+
+    it("complete a RPS game when you click the play button. Expect all the relevant fns to be called.", function(){
+
+      loadFixtures('play.html');
+        
+      spyOn(game, 'updatePlayerAWeapon');
+      spyOn(game, 'updatePlayerBWeapon');
+      spyOn(game, 'updateResultToUi');
+      spyOn(game, 'determineResult');
+      spyOn(game, 'createResultMessage');
+
       game.play('rock');
 
-      // Expect it to call all the relevant function
+
+      expect(game.updatePlayerAWeapon).toHaveBeenCalled();
+      expect(game.updatePlayerAWeapon).toHaveBeenCalled();
+      expect(game.updateResultToUi).toHaveBeenCalled();
+      expect(game.determineResult).toHaveBeenCalled();
+      expect(game.createResultMessage).toHaveBeenCalled();
+
+
+
+      // Expect it to call all the relevant functions:
+        // result = this.determineResult(playerAWeapon, playerBWeapon);
+        // resultMessage = this.createResultMessage(result, playerAWeapon, playerBWeapon);
+
+      // Expect it to return one of the valid results
+      
+    });
+
+    it("complete a RPS game when you click the play button. Expect the result to be valid.", function(){
+
+      var outcomes = ['playerA', 'playerB', 'draw'];
+
+      loadFixtures('play.html');
+      var outcome = game.play('rock');
+
+      expect(outcomes.indexOf(outcome)).not.toBe(-1);
 
     });
 
-    it("complete a RPS game when you click the play button", function(){
+    it("complete a RPS game when you click the play button PC V PC.", function(){
 
       loadFixtures('play.html');
+
+      spyOn(game, 'updatePlayerAWeapon');
+      spyOn(game, 'updatePlayerBWeapon');
+      spyOn(game, 'updateResultToUi');
+      spyOn(game, 'determineResult');
+      spyOn(game, 'createResultMessagePC');
+      
       game.play();
 
-      // Expect it to call all the relevant function
+      // Expect it to call all the relevant functions
+
+      expect(game.updatePlayerAWeapon).toHaveBeenCalled();
+      expect(game.updatePlayerAWeapon).toHaveBeenCalled();
+      expect(game.updateResultToUi).toHaveBeenCalled();
+      expect(game.determineResult).toHaveBeenCalled();
+      expect(game.createResultMessagePC).toHaveBeenCalled();
+
+    });
+
+    it("complete a RPS game when you click the play button PC V PC. Expect the result to be valid.", function(){
+
+      var outcomes = ['playerA', 'playerB', 'draw'];
+
+      loadFixtures('play.html');
+      var outcome = game.play();
+
+      expect(outcomes.indexOf(outcome)).not.toBe(-1);
 
     });
 
@@ -139,6 +205,51 @@ describe("A Game object ", function() {
       var weaponB = 'rock';
 
       expect(game.createResultMessage(result, weaponA, weaponB)).toBe('Doh! You lost. You played ' + weaponA + ' and the computer played ' + weaponB + '.');
+
+    });
+
+
+  });
+
+describe("can create a message to show the user based on the result for PC v PC.", function(){
+
+    it("Consider rock v paper", function(){
+
+      var result = 'playerA';
+      var weaponA = 'rock';
+      var weaponB = 'scissors';
+
+      expect(game.createResultMessagePC(result, weaponA, weaponB)).toBe('Player A won! Player A shot '+ weaponA +' and Player B shot '+ weaponB +'.');
+
+    });
+
+    it("Consider rock v paper", function(){
+
+      var result = 'playerA';
+      var weaponA = 'paper';
+      var weaponB = 'rock';
+
+      expect(game.createResultMessagePC(result, weaponA, weaponB)).toBe('Player A won! Player A shot '+ weaponA +' and Player B shot '+ weaponB +'.');
+
+    });
+
+    it("Consider scissors v scissors", function(){
+
+      var result = 'draw';
+      var weaponA = 'scissors';
+      var weaponB = 'scissors';
+
+      expect(game.createResultMessagePC(result, weaponA, weaponB)).toBe('It was a draw! Better play again. Player A shot '+ weaponA +' and Player B shot '+ weaponB +'.');
+
+    });
+
+    it("Consider scissors v rock", function(){
+
+      var result = 'playerB';
+      var weaponA = 'scissors';
+      var weaponB = 'rock';
+
+      expect(game.createResultMessagePC(result, weaponA, weaponB)).toBe('Player B won! Player A shot '+ weaponA +' and Player B shot '+ weaponB +'.');
 
     });
 

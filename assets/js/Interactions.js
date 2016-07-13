@@ -46,6 +46,18 @@ function Interactions () {
 
 		},
 
+		displayInvalidUserMessage: function(){
+
+			document.getElementById('invalid-user-message').className = "";
+
+		},
+
+		hideInvalidUserMessage: function(){
+
+			document.getElementById('invalid-user-message').className = "hidden";
+
+		},
+
 		populateUserDataTable: function(userData){
 
 			var userWins = document.getElementById('user-wins');

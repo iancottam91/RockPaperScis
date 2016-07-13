@@ -2,7 +2,7 @@ describe("User Interactions:", function() {
 
   jasmine.getFixtures().fixturesPath = 'src/fixtures/';
 
-  var interactions = Interactions();
+  var interactions = Interactions(); 
 
   describe("Adding User data", function(){
 
@@ -19,6 +19,28 @@ describe("User Interactions:", function() {
       losses: 3,
       draws: 0
     }
+
+    it(" can display an error message when an invalid user is entered or too many are added.", function() {
+
+      loadFixtures('usermessage.html');
+      interactions.displayInvalidUserMessage();
+
+      expect($('#invalid-user-message')).not.toHaveClass("hidden");
+
+
+    });
+
+    it(" can hide the invalid user message.", function() {
+
+      loadFixtures('usermessage.html');
+      interactions.displayInvalidUserMessage();
+      expect($('#invalid-user-message')).not.toHaveClass("hidden");
+      interactions.hideInvalidUserMessage();
+
+      expect($('#invalid-user-message')).toHaveClass("hidden");
+
+
+    });
 
     it(" can display a message saying there is no user data", function() {
 

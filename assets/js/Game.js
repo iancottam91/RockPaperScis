@@ -55,7 +55,7 @@ function Game () {
         this.updatePlayerBWeapon(playerBWeapon);
         result = this.determineResult(playerAWeapon, playerBWeapon);
         resultMessage = this.createResultMessage(result, playerAWeapon, playerBWeapon);
-        this.updateResultToUi(resultMessage);
+        this.updateResultToUi(resultMessage, result);
         return result;
 
       } else {
@@ -66,8 +66,8 @@ function Game () {
         this.updatePlayerBWeapon(playerBWeapon);
         result = this.determineResult(playerAWeapon, playerBWeapon);
 
-        resultMessage = this.createResultMessage(result, playerAWeapon, playerBWeapon);
-        this.updateResultToUi(resultMessage);
+        resultMessage = this.createResultMessagePC(result, playerAWeapon, playerBWeapon);
+        this.updateResultToUi(resultMessage, result);
 
         return result;
       }
@@ -88,6 +88,24 @@ function Game () {
       }
 
       message+= ' You played ' + playerAWeapon + ' and the computer played ' + playerBWeapon + '.'; 
+
+      return message;
+
+    },
+
+    createResultMessagePC : function(result, playerAWeapon, playerBWeapon){
+
+      var message = "";
+
+      if(result === 'playerA'){
+        message += 'Player A won!'
+      } else if (result === 'playerB'){
+        message += 'Player B won!'
+      } else {
+        message += 'It was a draw! Better play again.'
+      }
+
+      message+= ' Player A shot ' + playerAWeapon + ' and Player B shot ' + playerBWeapon + '.'; 
 
       return message;
 
@@ -151,11 +169,21 @@ function Game () {
     },
 
     // update the game result message element with a message
-    updateResultToUi: function(resultMessage){
+    updateResultToUi: function(resultMessage, result){
 
       setTimeout(function() {
-        document.getElementById('game-result-message').textContent = resultMessage;
+        var resultEle = document.getElementById('game-result-message');
+        resultEle.textContent = resultMessage;
         document.getElementById('game-result').className = "";
+
+        if(result === 'playerA'){
+          resultEle.className = 'win';
+        } else if (result === 'draw'){
+          resultEle.className = 'draw';
+        } else if (result === 'playerB'){
+          resultEle.className = 'loss';
+        }
+
       }, 3000);
 
     }

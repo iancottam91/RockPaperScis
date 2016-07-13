@@ -75,6 +75,24 @@ h1{
 #game-result{
   margin-bottom: 40px;
 }
+#game-result-message{
+  font-weight: bold;
+  &.draw{
+    color: #8c7001;
+  }
+  &.win{
+    color: green;
+  }
+  &.loss{
+    color: $red;
+  }
+}
+
+#invalid-user-message{
+  color: $red;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
 
 #play-game, #player-b-weapon, #player-a-weapon{
   @include btn();

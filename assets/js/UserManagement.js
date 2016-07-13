@@ -27,13 +27,13 @@ function Storage(){
     // set selected user - keep this as a separate property for simplicity 
     setSelectedUser : function(name){
 
-      sessionStorage.setItem( "rps_user_selected", name);
+      localStorage.setItem( "rps_user_selected", name);
 
     },
 
     getSelectedUser : function(){
 
-      return sessionStorage.getItem( "rps_user_selected");
+      return localStorage.getItem( "rps_user_selected");
 
     },
 
@@ -48,7 +48,7 @@ function Storage(){
         }
       }
       
-      var allUserData = sessionStorage.getItem("rps_user_data");
+      var allUserData = localStorage.getItem("rps_user_data");
 
       if(allUserData !== undefined && allUserData !== null){
         var users = JSON.parse( allUserData );
@@ -76,14 +76,14 @@ function Storage(){
         }
       }
 
-      var allUserData = sessionStorage.getItem("rps_user_data");
+      var allUserData = localStorage.getItem("rps_user_data");
 
       if(allUserData !== undefined && allUserData !== null){
         users = JSON.parse( allUserData );
         users = users.filter(removeExisitingEntry);
         users.push(data);
 
-        sessionStorage.setItem("rps_user_data", JSON.stringify(users) );
+        localStorage.setItem("rps_user_data", JSON.stringify(users) );
       } else{
         return false;
       }
@@ -94,18 +94,26 @@ function Storage(){
     addUser : function(data){
 
       // get existing data object
-      var allUserData = sessionStorage.getItem("rps_user_data");
+      var allUserData = localStorage.getItem("rps_user_data");
       var users;
+
+      // return false if no name is entered
+      if (data.name === ""){
+        return false;
+      }
 
       // if there is no object add it and create the user
       if(allUserData === undefined || allUserData === null){
 
         users = [];
         users.push(data);
-        sessionStorage.setItem( "rps_user_data", JSON.stringify(users) );
+        localStorage.setItem( "rps_user_data", JSON.stringify(users) );
+        return true;
       } else {
       
         users = JSON.parse( allUserData );
+
+        console.log(data.name);
 
         // check if existing user exists - dont add a user twice
         if(this.userExists(data.name)){
@@ -114,8 +122,10 @@ function Storage(){
         } else if(users.length < 5){
           // if there are less than five users add the new one
           users.push(data);
-          sessionStorage.setItem( "rps_user_data", JSON.stringify(users) );
+          localStorage.setItem( "rps_user_data", JSON.stringify(users) );
+          return true;
         } else {
+          console.log('too many users');
           return false;
         }
 
@@ -127,7 +137,7 @@ function Storage(){
     
     userExists : function(name){
 
-      var allUserData = sessionStorage.getItem("rps_user_data");
+      var allUserData = localStorage.getItem("rps_user_data");
       var users;
       var matches;
 
@@ -158,12 +168,12 @@ function Storage(){
 
     // clear all users from storage object
     deleteAllUsers : function(){
-      sessionStorage.removeItem("rps_user_data");
+      localStorage.removeItem("rps_user_data");
     },
 
     // get all user data as JSON array
     getAllUsers : function(){
-      return JSON.parse( sessionStorage.getItem("rps_user_data") );
+      return JSON.parse( localStorage.getItem("rps_user_data") );
     },
 
     // update a users data based on a result

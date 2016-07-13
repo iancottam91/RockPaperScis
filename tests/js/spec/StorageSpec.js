@@ -18,19 +18,19 @@ describe("A Storage object ", function() {
     beforeEach(function(){
 
       // this allows us to mock the use of local storage in our tests
-      spyOn(sessionStorage, 'getItem').and.callFake(function(key){
+      spyOn(localStorage, 'getItem').and.callFake(function(key){
         return store[key];
       });
 
-      spyOn(sessionStorage, 'setItem').and.callFake(function(key, value){
+      spyOn(localStorage, 'setItem').and.callFake(function(key, value){
         return store[key] = value + '';
       });
 
-      spyOn(sessionStorage, 'clear').and.callFake(function(key){
+      spyOn(localStorage, 'clear').and.callFake(function(key){
         store = {};
       });
 
-      spyOn(sessionStorage, 'removeItem').and.callFake(function(key){
+      spyOn(localStorage, 'removeItem').and.callFake(function(key){
         delete store[key];
       });
 
@@ -43,6 +43,20 @@ describe("A Storage object ", function() {
     afterEach(function(){
 
       store = {};
+
+    });
+
+    it("It wont let you add a user with no username", function() {
+
+      var userNoNameData = {
+        name : '',
+        wins : 0,
+        losses: 0,
+        draws: 0
+      }
+
+      expect( storer.addUser(userNoNameData) ).toBeFalsy();
+
 
     });
 
@@ -153,8 +167,6 @@ describe("A Storage object ", function() {
       }
 
       storer.setUserData(userTwoData);
-
-      console.log( storer.getUserData('Jo Smith') );
 
       expect(storer.getUserData('Jo Smith')).toEqual(userTwoData);
 
