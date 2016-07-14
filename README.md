@@ -29,7 +29,8 @@ https://blooming-island-72413.herokuapp.com/tests/js/SpecRunnerUI.html
 ## Target browsers:
 
 - The tests should be run using google chrome
-- This application will run best on google chrome, firefox, or IE9+
+- This application will run best on google chrome.
+- The application will also run on firefox, IE9+ or mobile browsers.
 
 ## Technical Summary:
 
