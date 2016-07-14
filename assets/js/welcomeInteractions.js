@@ -8,20 +8,8 @@
 
   function processForm(e) {
     if (e.preventDefault) e.preventDefault();
-    return false;
-  }
 
-  var form = document.getElementById('add-user-form');
-  if (form.attachEvent) {
-      form.attachEvent("submit", processForm);
-  } else {
-      form.addEventListener("submit", processForm);
-  }
-  
-  // add user when clicking the add user btn
-	document.getElementById('add-user-button').onclick = function() {
-
-		var userName = document.getElementById('user-name-field').value;
+    var userName = document.getElementById('user-name-field').value;
 		user = User(userName);
 
 		var canAddUser = storer.addUser(user.getData());
@@ -40,7 +28,12 @@
 			interactions.displayInvalidUserMessage();
 		}
 
-	}
+		// return false to stop default form submission
+    return false;
+  }
+
+  var form = document.getElementById('add-user-form');
+  form.addEventListener("submit", processForm);
 
 	// delete all users when click the delete user button
 	document.getElementById('delete-users').onclick = function() {
