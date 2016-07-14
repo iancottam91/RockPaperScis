@@ -53,6 +53,7 @@ h1{
     padding: 5px;
     cursor: pointer;
     &:hover{
+      outline: rgba(229, 151, 0, 255) auto 5px;
       outline: -webkit-focus-ring-color auto 5px;
     }
   }
@@ -60,6 +61,7 @@ h1{
 
 .weapon-select{
   &.selected{
+    outline: rgba(229, 151, 0, 255) auto 5px;
     outline: -webkit-focus-ring-color auto 5px;
   }
 }

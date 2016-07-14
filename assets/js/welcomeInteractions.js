@@ -5,7 +5,6 @@
   var user;
 
   // take user data and populate the table
-
   function processForm(e) {
     if (e.preventDefault) e.preventDefault();
 
